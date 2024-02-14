@@ -2,7 +2,7 @@ const Pokemons = require("../model/pokemonListe.model.js");
 
 exports.trouverLesPokemon= (req, res) => {
 
-
+    // NOTE : Le paramètre devait s'appeller type
     // Appel à la fonction trouverUnProfesseur dans le modèle
     Pokemons.trouverLesPokemon(req.query.type_primaire)
     // Si c'est un succès

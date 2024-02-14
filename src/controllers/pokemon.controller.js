@@ -58,6 +58,7 @@ exports.modifierUnPokemon = (req, res) => {
         message += "defense\r\n";
     }
     if(message != ""){
+        // NOTE : Le format de la réponse n'est pas comme demandé
         res.status(400);
         res.send({
             champ_manquant:  message

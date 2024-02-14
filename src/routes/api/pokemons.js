@@ -1,6 +1,7 @@
 const express = require('express');
 // Nous créons un objet router qui va nous permettre de gérer les routes
 const router = express.Router();  
+// NOTE : Pourquoi ne pas tout regrouper dans le même controlleur?
 const pokemonController = require('../../controllers/pokemon.controller');
 const pokemonsControleur = require('../../controllers/pokemonListe.controller');
 const ajouterPokemonControleur = require('../../controllers/ajouterPokemon.controller')

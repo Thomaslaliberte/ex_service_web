@@ -24,6 +24,7 @@ exports.ajouterUnPokemon = (req, res) => {
     }
     if(message != ""){
         res.status(400);
+        // NOTE : Le format de la réponse n'est pas comme demandé
         res.send({
             champ_manquant:  message
         });

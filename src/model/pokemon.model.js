@@ -1,7 +1,7 @@
 const sql = require("../config/db.js");
-const pokemonController = require('../controllers/pokemon.controller');
-
-const Pokemon = (pokemon) => {
+// const pokemonController = require('../controllers/pokemon.controller');
+// NOTE : Erreur dans tes exports
+const Pokemons = (pokemon) => {
     this.nom = pokemon.nom;
     this.type_primaire = pokemon.type_primaire;
     this.type_secondaire = pokemon.type_secondaire;
@@ -10,7 +10,7 @@ const Pokemon = (pokemon) => {
     this.defense = pokemon.defense;
 };
 
-Pokemon.trouverUnPokemon = (id) => {
+Pokemons.trouverUnPokemon = (id) => {
     return new Promise((resolve, reject) => {
 
         const requete = `SELECT nom, type_primaire, type_secondaire, pv, attaque, defense FROM pokemon WHERE id = ?`;
@@ -27,18 +27,18 @@ Pokemon.trouverUnPokemon = (id) => {
     });
 };
 
-module.exports = Pokemon;
+// module.exports = Pokemon;
 
 
 
-const Pokemons = (pokemons) => {
-    this.nom = pokemons.nom;
-    this.type_primaire = pokemons.type_primaire;
-    this.type_secondaire = pokemons.type_secondaire;
-    this.pv = pokemons.pv;
-    this.attaque = pokemons.attaque;
-    this.defense = pokemons.defense;
-};
+// const Pokemons = (pokemons) => {
+//     this.nom = pokemons.nom;
+//     this.type_primaire = pokemons.type_primaire;
+//     this.type_secondaire = pokemons.type_secondaire;
+//     this.pv = pokemons.pv;
+//     this.attaque = pokemons.attaque;
+//     this.defense = pokemons.defense;
+// };
 
 Pokemons.modifierUnPokemon = (req) => {
     return new Promise((resolve, reject) => {
@@ -58,7 +58,7 @@ Pokemons.modifierUnPokemon = (req) => {
     });
 };
 
-module.exports = Pokemons;
+// module.exports = Pokemons;
 
 Pokemons.verifierUnPokemon = (req) => {
     return new Promise((resolve, reject) => {
@@ -78,7 +78,7 @@ Pokemons.verifierUnPokemon = (req) => {
     });
 };
 
-module.exports = Pokemons;
+// module.exports = Pokemons;
 
 
 Pokemons.supprimerUnPokemon = (req) => {
